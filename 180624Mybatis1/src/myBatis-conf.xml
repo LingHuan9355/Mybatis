@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--  2.3.	添加Mybatis的配置文件conf.xml  -->
+<configuration>
+
+		<properties  resource="db.properties"/>
+		
+		<!-- 配置实体类的别名 -->
+		<typeAliases>
+					<!-- <typeAlias type="com.hr.mybatis.beans.User" alias="_User"/> -->
+					<package name="com.hr.mybatis.beans"/>
+		</typeAliases>
+
+		<!-- development : 开发模式
+		  		work  ：  工作模式
+		 -->
+	<environments default="development">
+		<environment id="development">
+			<!-- 事务管理器的配置（比如：type=”JDBC”）。
+			JDBC – 这个配置直接简单使用了 JDBC 的提交和回滚设置。它依赖于从数据源得到的连接来管理事务范围。
+		    MANAGED – 这个配置几乎没做什么。它从来不提交或回滚一个连接。而它会让容器来管理事务的整个生命周期
+		  （比如 Spring 或 JEE 应用服务器的上下文）。默认情况下它会关闭连接。然而一些容器并不希望这样，
+			因此如果你需要从连接中停止它，将 closeConnection 属性设置为 false。
+			 -->
+			<transactionManager type="JDBC" />
+			
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${user}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+			
+		</environment>
+	</environments>
+	
+	<mappers>
+	        <!-- 2.6.	在conf.xml文件中注册userMapper.xml文件 -->
+			<mapper resource="com/hr/mybatis/test1/userMapper.xml"/>
+			<mapper resource="com/hr/mybatis/xml/test2/userMapper.xml"/>
+			<!-- 2). 在config中注册这个映射接口 -->
+			<mapper class="com.hr.mybatis.annotation.test3.UserMapper"/>
+	</mappers>
+	
+</configuration>
