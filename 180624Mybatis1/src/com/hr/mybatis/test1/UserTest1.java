@@ -51,7 +51,7 @@ public class UserTest1 {
 				//创建能执行映射文件中sql的sqlSession
 				SqlSession sqlSession = sessionFactory.openSession();
 				//映射sql的标识字符串
-				String statement  = "com.hr.mybatis.beans.test1.userMapper" + ".getUser";
+				String statement  = "com.hr.mybatis.test1.userMapper" + ".getUser";
 				//执行查询返回一个唯一user对象的sql
 				User user = sqlSession.selectOne(statement, 2);
 				

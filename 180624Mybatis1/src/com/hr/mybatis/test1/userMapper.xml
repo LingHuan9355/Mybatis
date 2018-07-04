@@ -3,7 +3,7 @@
 
 <!-- 2.5.	定义操作users表的sql映射文件userMapper.xml -->
 <!--namespace必须是接口的全类名  -->
-<mapper namespace="com.hr.mybatis.beans.test1.userMapper"> 
+<mapper namespace="com.hr.mybatis.test1.userMapper"> 
 
 		<!--根据id查询得到一个user对象  -->
 		<select id="getUser" parameterType="int" 	resultType="com.hr.mybatis.beans.User">
