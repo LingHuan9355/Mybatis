@@ -1,16 +1,17 @@
 package com.hr.mybatis.beans;
 
+import java.util.List;
+
 public class Classes {
 
 	private int id;
 	private String name;
 	private Teacher teacher;
-
+	private List<Student> list;
 	
 	public Classes() {
 		super();
 	}
-
 	
 	public Classes(int id, String name, Teacher teacher) {
 		super();
@@ -19,7 +20,24 @@ public class Classes {
 		this.teacher = teacher;
 	}
 
+  
 
+	public Classes(int id, String name, Teacher teacher, List<Student> list) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.teacher = teacher;
+		this.list = list;
+	}
+
+
+	public List<Student> getList() {
+		return list;
+	}
+
+	public void setList(List<Student> list) {
+		this.list = list;
+	}
 
 	public int getId() {
 		return id;
@@ -40,11 +58,12 @@ public class Classes {
 		this.teacher = teacher;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Classs [id=" + id + ", name=" + name + ", teacher=" + teacher + "]";
+		return "Classes [id=" + id + ", name=" + name + ", teacher=" + teacher + ", list=" + list + "]";
 	}
+
+
 
 	
 	
