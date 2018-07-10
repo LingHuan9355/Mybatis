@@ -1,10 +1,12 @@
-package com.hr.mybatis.test7;
+package com.hr.mybatis.procedure.test8;
 
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -21,28 +23,29 @@ import com.hr.mybatis.xml.test2.UserTest2;
 
 /**
  * 
- * @Name  : DUserTest7
+ * @Name  : PUserProcedureTest8
  * @Author : LH
- * @Date : 2018年7月10日 下午10:45:04
+ * @Date : 2018年7月10日 下午11:18:26
  * @Version : V1.0
  * 
- * @Description :  7.测试: 动态SQL与模糊查询
+ * @Description : 8.测试调用存储过程
  */
-public class DUserTest7 {
+public class PUserProcedureTest8 {
 
 			@Test
-			public void testUser() throws IOException {
+			public void testPUserProcedure() throws IOException {
 					SqlSessionFactory sqlSessionFactory = MyBatisUtils.getFactory();
 					SqlSession sqlSession = sqlSessionFactory.openSession();
 					
-					String statement = "com.hr.mybatis.test7.UserMapper" + ".getUser";
+					String statement = "com.hr.mybatis.procedure.test8.UserMapper" + ".getUserCount";
 					
-					String name = "o";
-					name =null;
-					ConditionUser parameter = new ConditionUser("%"+name+"%", 13, 18);
+					Map<String, Integer> parameterMap = new HashMap<String,Integer>();
+					parameterMap.put("sexid", 0);
+					parameterMap.put("usercount", -1);
 					
-					List<User> list = sqlSession.selectList(statement, parameter);
-					System.out.println(list);
+					sqlSession.selectOne(statement, parameterMap);
+					Integer result = parameterMap.get("usercount");
+					System.out.println(result);
 					
 					sqlSession.close();
 			}
