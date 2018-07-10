@@ -4,10 +4,10 @@ package com.hr.mybatis.beans;
  * 
  * @Name  : User
  * @Author : LH
- * @Date : 2018年7月3日 下午10:33:09
+ * @Date : 2018年7月10日 下午10:39:45
  * @Version : V1.0
  * 
- * @Description :   2.4.	定义表所对应的实体类
+ * @Description : 	定义表所对应的实体类
  */
 public class User {
 //shift +alt + s

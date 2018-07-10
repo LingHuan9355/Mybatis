@@ -43,6 +43,7 @@
 			<mapper resource="com/hr/mybatis/test4/orderMapper.xml"/>
 			<mapper resource="com/hr/mybatis/test5/ClassMapper.xml"/>
 			<mapper resource="com/hr/mybatis/test6/ClassMapper.xml"/>
+			<mapper resource="com/hr/mybatis/test7/UserMapper.xml"/>
 	</mappers>
 	
 </configuration>
