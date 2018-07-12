@@ -45,6 +45,7 @@
 			<mapper resource="com/hr/mybatis/collection/test6/ClassMapper.xml"/>
 			<mapper resource="com/hr/mybatis/like/test7/UserMapper.xml"/>
 			<mapper resource="com/hr/mybatis/procedure/test8/UserMapper.xml"/>
+			<mapper resource="com/hr/mybatis/cache/test9/CUserMapper.xml"/>
 	</mappers>
 	
 </configuration>
