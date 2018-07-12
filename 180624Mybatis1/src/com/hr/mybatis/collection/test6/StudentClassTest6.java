@@ -1,4 +1,4 @@
-package com.hr.mybatis.test6;
+package com.hr.mybatis.collection.test6;
 
 
 import java.io.IOException;
@@ -33,7 +33,7 @@ public class StudentClassTest6 {
 					SqlSessionFactory sqlSessionFactory = MyBatisUtils.getFactory();
 					SqlSession sqlSession = sqlSessionFactory.openSession(true);
 					
-					String statement = "com.hr.mybatis.test6.ClassMapper" + ".getClass";
+					String statement = "com.hr.mybatis.collection.test6.ClassMapper" + ".getClass";
 					
 					Classes classes = sqlSession.selectOne(statement, 1);
 					System.out.println(classes);
@@ -45,7 +45,7 @@ public class StudentClassTest6 {
 				SqlSessionFactory sqlSessionFactory = MyBatisUtils.getFactory();
 				SqlSession sqlSession = sqlSessionFactory.openSession(true);
 				
-				String statement = "com.hr.mybatis.test6.ClassMapper" + ".getClass2";
+				String statement = "com.hr.mybatis.collection.test6.ClassMapper" + ".getClass2";
 				
 				Classes classes = sqlSession.selectOne(statement, 2);
 				System.out.println(classes);

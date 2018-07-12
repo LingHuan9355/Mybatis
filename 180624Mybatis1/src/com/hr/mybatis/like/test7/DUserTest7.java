@@ -1,4 +1,4 @@
-package com.hr.mybatis.test7;
+package com.hr.mybatis.like.test7;
 
 
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class DUserTest7 {
 					SqlSessionFactory sqlSessionFactory = MyBatisUtils.getFactory();
 					SqlSession sqlSession = sqlSessionFactory.openSession();
 					
-					String statement = "com.hr.mybatis.test7.UserMapper" + ".getUser";
+					String statement = "com.hr.mybatis.like.test7.UserMapper" + ".getUser";
 					
 					String name = "o";
 					name =null;

@@ -1,4 +1,4 @@
-package com.hr.mybatis.test4;
+package com.hr.mybatis.association.test5;
 
 
 import java.io.IOException;
@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
+import com.hr.mybatis.beans.Classes;
 import com.hr.mybatis.beans.Order;
 import com.hr.mybatis.beans.User;
 import com.hr.mybatis.util.MyBatisUtils;
@@ -18,26 +19,26 @@ import com.hr.mybatis.xml.test2.UserTest2;
 
 /**
  * 
- * @Name  : OrderTest4
+ * @Name  : TeacherClassTest5
  * @Author : LH
- * @Date : 2018年7月4日 下午11:08:32
+ * @Date : 2018年7月4日 下午11:45:42
  * @Version : V1.0
  * 
- * @Description :  5. 解决字段名与实体类属性名不相同的冲突
+ * @Description :   测试: 一对一关联表查询
  */
-public class OrderTest4 {
+public class TeacherClassTest5 {
 
 			@Test
-			public void testOrder() throws IOException {
+			public void testClass() throws IOException {
 					SqlSessionFactory sqlSessionFactory = MyBatisUtils.getFactory();
 					SqlSession sqlSession = sqlSessionFactory.openSession(true);
 					
-					String statement = "com.hr.mybatis.test4.orderMapper" + ".getOrder";
-				     statement = "com.hr.mybatis.test4.orderMapper" + ".getOrder2";
+					String statement = "com.hr.mybatis.association.test5.ClassMapper" + ".getClass";
+					 statement = "com.hr.mybatis.association.test5.ClassMapper" + ".getClass2";
 					
-					Order order = sqlSession.selectOne(statement, 3);
+					Classes classes = sqlSession.selectOne(statement, 1);
+					System.out.println(classes);
 					sqlSession.close();
-					System.out.println(order);
 					
 			}
 

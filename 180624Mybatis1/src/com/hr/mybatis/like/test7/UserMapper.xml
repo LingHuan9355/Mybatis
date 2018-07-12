@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 					 "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
-<mapper namespace="com.hr.mybatis.test7.UserMapper"> 
+<mapper namespace="com.hr.mybatis.like.test7.UserMapper"> 
 			<!-- 7. 动态SQL与模糊查询 -->
 	   		<!-- 
 				实现多条件查询用户(姓名模糊匹配, 年龄在指定的最小值到最大值之间)

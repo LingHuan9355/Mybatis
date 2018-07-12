@@ -40,11 +40,12 @@
 			<mapper resource="com/hr/mybatis/xml/test2/userMapper.xml"/>
 			<!-- 2). 在config中注册这个映射接口 -->
 			<mapper class="com.hr.mybatis.annotation.test3.UserMapper"/>
-			<mapper resource="com/hr/mybatis/test4/orderMapper.xml"/>
-			<mapper resource="com/hr/mybatis/test5/ClassMapper.xml"/>
-			<mapper resource="com/hr/mybatis/test6/ClassMapper.xml"/>
-			<mapper resource="com/hr/mybatis/test7/UserMapper.xml"/>
+			<mapper resource="com/hr/mybatis/column/test4/orderMapper.xml"/>
+			<mapper resource="com/hr/mybatis/association/test5/ClassMapper.xml"/>
+			<mapper resource="com/hr/mybatis/collection/test6/ClassMapper.xml"/>
+			<mapper resource="com/hr/mybatis/like/test7/UserMapper.xml"/>
 			<mapper resource="com/hr/mybatis/procedure/test8/UserMapper.xml"/>
+			<mapper resource="com/hr/mybatis/cache/test9/CUserMapper.xml"/>
 	</mappers>
 	
 </configuration>
